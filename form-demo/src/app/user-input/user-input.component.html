@@ -1,0 +1,21 @@
+<input (keyup)="onKey($event)"/>
+
+<p>{{values}}</p>
+
+<input #box (keyup)="0"/>
+<p>{{box.value}}</p>
+
+<input #box2 (keyup.enter)="onEnter(box2.value)">
+<p>{{box2Value}}</p>
+
+<input #box3 (blur)="update(box3.value)">
+<p>{{box3Value}}</p>
+
+<div>Add Heros</div>
+<input #hero (blur)="add(hero.value); hero.value=''" /> <button (click)="add(hero.value)">add</button>
+
+<div>
+  <ul>
+    <li *ngFor="let hero of heros">{{hero}}</li>
+  </ul>
+</div>
