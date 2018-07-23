@@ -4,10 +4,16 @@
 <nz-layout>
   <nz-sider [nzWidth]="260" style="background:#fff">
     <ul nz-menu [nzMode]="'inline'">
+      <li nz-menu-item routerLink="">
+          <span title>
+            <i class="anticon anticon-book"></i>
+            <span>Dsahboard</span>
+          </span>
+      </li>
       <li nz-submenu>
         <span title><i class="anticon anticon-user"></i> Manager Student</span>
         <ul>
-          <li nz-menu-item>Add Student</li>
+          <li nz-menu-item routerLink="/add">Add Student</li>
           <li nz-menu-item>Option 10</li>
           <li nz-menu-item>Option 11</li>
         </ul>
@@ -62,7 +68,7 @@
         <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
       </nz-breadcrumb>
       <div style="padding:10px; background: #fff;min-height: 280px;">
-        Bill is a cat.
+        <router-outlet></router-outlet>
       </div>
     </nz-content>
     <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
